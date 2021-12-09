@@ -1,0 +1,226 @@
+img#anis {
+	margin-left : 170PX;
+	margin-top: 10px;
+	width:250px; 
+	height:240px;
+	padding: 10px;
+	border-radius: 150px;
+}  
+body {
+	background-color : #75C3FB;
+	
+	
+}
+.pos {
+	text-align: center; 
+	font-size: 18px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.head {	
+    animation-name: colorloop;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+	font-size: 25px;
+}
+@keyframes colorloop{
+    0%{
+		color: white;
+    }
+    30%{
+        color: #944FF3;
+    }
+	60%{
+        color: #9EB4C3;
+    }
+	100%{
+        color: black ;
+    }
+}
+
+.about {
+	width: 600px; 
+	background-color:#0C456D; 
+	border-radius: 40px; 
+	height: 520px; 
+	padding-left: 20px;
+	padding-right: 10px; 
+	margin-left:30px; 
+	margin-top: 10px; 
+	font-size:15px;
+	color: white;
+	display : inline-block;
+	box-shadow: 5px 5px 30px 5px #212F3C;
+	font-family:Arial, "Times New Roman";
+}	
+.personal { 
+	width: 620px; 
+	background-color:#0C456D; 
+	border-radius: 40px; 
+	height: 330px; 
+	padding-left: 50px; 
+	margin-right: 0px;
+	margin-left: 50px;
+	padding-right: 20px;  
+	margin-top: 10px; 
+	font-size: 15px; 
+	padding-bottom: 50px;
+	display : inline-block;
+	box-shadow: 5px 5px 30px 5px #212F3C;
+	font-family:Arial, "Times New Roman";
+	color:white;
+}
+.experience {
+	width: 420px; 
+	border-radius: 10px; 
+	height: 380px; 
+	border-radius :0px;
+	padding-left: 10px;
+	margin-left:50px; 
+	margin-top: 40px; 
+	font-size:15px;
+	display : inline-block;
+	font-family:Arial, "Times New Roman";
+	box-shadow: 5px 5px 30px 5px #212F3C;
+	background-color:#0C456D;
+	color: white;
+}
+.ability {
+	width: 300px; 
+	height: 400px; 
+	padding-right: 20px; 
+	margin-left:100px; 
+	margin-top: 40px;
+	font-size: 15px;
+	display : inline-block;
+	font-family:Arial, "Times New Roman";
+	box-shadow: 5px 5px 30px 5px #212F3C;
+	background-color:#0C456D; 
+	color: white;
+}
+.eductaion {
+	width: 420px; 
+	height: 450px; 
+	padding-right: 20px;
+	margin-left:100px; 
+	margin-top: 50px; 
+	font-size:15px;
+	display : inline-block;
+	font-family:Arial, "Times New Roman";
+	box-shadow: 5px 5px 30px 5px #212F3C;
+	background-color:#0C456D; 
+	color: white;
+}
+tr, th, td {
+	width:170px;
+	font-size:23px;
+	padding : 10px;
+	color:#fff;	
+}
+table {
+    border: 1px solid #0C456D;
+    border-collapse: collapse;
+	background-color: #0C456D;
+	margin-left:180px; 
+}
+
+nav {
+	line-height: 10px;
+	background-color: #EFEDD6;
+	text-align: center;
+	text-transform: uppercase;
+	padding: 10px;
+}
+nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;	
+}
+nav ul li {
+	display: inline-flex;
+}
+nav ul li a{
+
+	padding: 16px 0 5px;
+	margin: 0 25px;
+	
+	text-decoration: none;
+	font-size: 17px;
+	font-family: courier,arial,helvetica;
+}
+nav ul li a:hover { 
+	color: #75C3FB;
+	transition: .3s;
+}
+
+h1	{
+	font-family: Arial, "Times New Roman";
+	margin: 30px auto;
+	text-align: center;
+	font-size: 28px;
+	max-width: 500px;		
+	word-spacing: 3px;
+}
+h2	{
+	font-family: Arial, "Times New Roman";
+	color:#BDE0F9 ;
+	font-size: 25px;
+	text-align: center;	
+
+}
+html {
+	scroll-behavior: smooth;
+	icon-behavior: smooth;
+}
+hr.line {
+	background:black;
+	height: 2px;
+	border: none;
+	width: 1300px;
+}
+
+.outer { 
+	position: absolute;
+	height: 60px;
+	width: 60px;
+	padding : 0;
+	margin: 0;
+	display: inline-flex;
+}	
+.outer .button .icon {
+	padding-left: 73px;
+	padding-top: 8px;
+	margin: 0 20px;
+}
+.outer .button .icon .fab {
+	font-size: 30px;
+	line-height: 60px;
+	transition: .3s;
+	color:#75C3FB ;
+}	
+.outer .button .icon a {
+	position: relative;
+	display: block;
+	width: 60px;
+	height: 60px;
+	border-radius: 50px;
+	background-color: #fff;
+	text-align: center;
+	transition: .6s;
+	box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+}	
+.outer .button .icon:hover {
+	transform: translate(0, 10px);
+}
+.outer .button .icon nth-child(1): hover {
+	background-color: #1306c;
+}
+.outer .button .icon: nth-child(2): hover {
+	background-color:#1DA1F2;
+}
+.outer .button .icon: nth-child(3): hover {
+	background-color: #ff0000;
+}
+
+
+

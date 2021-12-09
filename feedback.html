@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html ">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Feedback Form</title>
+    <style>
+    button {
+        background-color: #199FDA;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+    table, tr{
+        border: 1px solid #ADE7FA; 
+        border-collapse: collapse;
+        height:100px; 
+        width:1000px;
+    }
+    body {
+        background-color: #ADE7FA;
+        font-size:16px;
+        font-family: Arial, Helvetica, sans-serif;
+        padding-left: 14px;
+    }
+    /* The container */
+    .container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 20px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    }
+
+    /* Hide the browser's default radio button */
+    .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    }
+
+    /* Create a custom radio button */
+    .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 35px;
+    width: 35px;
+    background-color: #eee;
+    border-radius: 50%;
+    }
+
+    /* On mouse-over, add a grey background color */
+    .container:hover input ~ .checkmark {
+    background-color: #ccc;
+    }
+
+    /* When the radio button is checked, add a blue background */
+    .container input:checked ~ .checkmark {
+    background-color:#4AB4D7;
+    }
+
+    /* Create the indicator (the dot/circle - hidden when not checked) */
+    .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+    }
+
+    /* Show the indicator (dot/circle) when checked */
+    .container input:checked ~ .checkmark:after {
+    display: block;
+    }
+
+    /* Style the indicator (dot/circle) */
+    .container .checkmark:after {
+        top: 9px;
+        left: 9px;
+        width: 17px;
+        height: 17px;
+        border-radius: 50%;
+        background: white;
+    } 
+    </style>
+</head>
+<body>
+
+    <script>
+        function validateForm() {
+            let n = document.forms["feedbackF"]["name"].value;
+            if (n == "") {
+                alert("Name must be filled out");
+                return false;
+            }
+            let g = document.forms["feedbackF"]["gen"].value;
+            if (g == "") {
+                alert("Gender must be choose");
+                return false;
+            }
+            let a = document.forms["feedbackF"]["age"].value;
+            if (a == "") {
+                alert("Age must be filled out");
+                return false;
+            }
+            let p = document.forms["feedbackF"]["phone"].value;
+            if (p == "") {
+                alert("Phone number must be filled out");
+                return false;
+            }
+            let c = document.forms["feedbackF"]["com"].value;
+            if (c == "") {
+                alert("Comment must be filled out");
+                return false;
+            }
+            let c1 = document.forms["feedbackF"]["check1"].value;
+            if (c1 == "") {
+                alert("Please choose the feedback for the question number 1");
+                return false;
+            }
+            let c2 = document.forms["feedbackF"]["check2"].value;
+            if (c2 == "") {
+                alert("Please choose the feedback for the question number 2");
+                return false;
+            }
+            let c3 = document.forms["feedbackF"]["check3"].value;
+            if (c3 == "") {
+                alert("Please choose the feedback for the question number 3");
+                return false;
+            }
+            let c4 = document.forms["feedbackF"]["check4"].value;
+            if (c4 == "") {
+                alert("Please choose the feedback for the question number 4");
+                return false;
+            }
+            let c5 = document.forms["feedbackF"]["check5"].value;
+            if (c5 == "") {
+                alert("Please choose the feedback for the question number 5");
+                return false;
+            }
+            let c6 = document.forms["feedbackF"]["check6"].value;
+            if (c6 == "") {
+                alert("Please choose the feedback for the question number 6");
+                return false;
+            }
+            let c7 = document.forms["feedbackF"]["check7"].value;
+            if (c7 == "") {
+                alert("Please choose the feedback for the question number 7");
+                return false;
+            }
+            let c8 = document.forms["feedbackF"]["check8"].value;
+            if (c8 == "") {
+                alert("Please choose the feedback for the question number 8");
+                return false;
+            }
+            alert("Thank you and Have a nice day <3");
+        }
+        
+    </script>
+
+    <h2>Feedback Form</h2>
+    <form name="feedbackF" onsubmit="return validateForm()" method="post">
+    Name <input type="text" name="name"><br><br>
+    Gender 
+    <input type="radio" name="gen" value="m"> Male
+    <input type="radio" name="gen" value="f"> Female <br><br>
+    Age <input type="text" name="age"><br><br>
+    Phone Number <input type="text" name="phone"><br><br>
+    Comment or Improvement Suggestion <br><br>
+    <textarea  name="com" rows="10" cols="50" value="" > </textarea> <br><br>
+
+    <b>Client Feedback</b> <br>
+    <hr>
+    <table>
+        <tr style="background-color: #4AB4D7;">
+            <td style="color:white;"><b>1.  Do you think it is easy to reach us?</b></td>
+        </tr>
+        <tr style="background-color: #ADE7FA;">
+            <td>
+                <div class="form-check form-check-inline">
+                <label class ="container">1
+                <input type="radio" name="check1">
+                <span class = "checkmark"></span></label></div>
+                <div class="form-check form-check-inline">
+                <label class ="container">2
+                <input type="radio" name="check1">
+                <span class = "checkmark"></span></label></div>
+                <div class="form-check form-check-inline">
+                <label class ="container">3
+                <input type="radio" name="check1">
+                <span class = "checkmark"></span></label></div>
+                <div class="form-check form-check-inline">
+                <label class ="container">4
+                <input type="radio" name="check1">
+                <span class = "checkmark"></span></label></div>
+                <div class="form-check form-check-inline">
+                <label class ="container">5
+                <input type="radio" name="check1">
+                <span class = "checkmark"></span></label></div>
+            </td>
+        </tr>
+        <tr style="background-color: #4AB4D7;">
+            <td style="color:white;"><b>2.  How well does our service meet your needs? </b></td>
+        </tr>
+        <tr style="background-color: #ADE7FA;">
+            <td>
+                <div class="form-check form-check-inline">
+                <label class ="container">1
+                <input type="radio" name="check2">
+                <span class = "checkmark"></span></label></div>
+                <div class="form-check form-check-inline">
+                <label class ="container">2
+                <input type="radio" name="check2">
+                <span class = "checkmark"></span></label></div>
+                <div class="form-check form-check-inline">
+                <label class ="container">3
+                <input type="radio" name="check2">
+                <span class = "checkmark"></span></label></div>
+                <div class="form-check form-check-inline">
+                <label class ="container">4
+                <input type="radio" name="check2">
+                <span class = "checkmark"></span></label></div>
+                <div class="form-check form-check-inline">
+                <label class ="container">5
+                <input type="radio" name="check2">
+                <span class = "checkmark"></span></label></div>
+            </td>
+        </tr>
+        <tr style="background-color: #4AB4D7;">
+            <td style="color:white;"><b>3.  How easy it is to navigate our website ?</b> </td>
+        </tr>
+        <tr style="background-color:#ADE7FA;">
+            <td>
+                <div class="form-check form-check-inline">
+                <label class ="container">1
+                <input type="radio" name="check3">
+                <span class = "checkmark"></span></label></div>
+                <div class="form-check form-check-inline">
+                <label class ="container">2
+                <input type="radio" name="check3">
+                <span class = "checkmark"></span></label></div>
+                <div class="form-check form-check-inline">
+                <label class ="container">3
+                <input type="radio" name="check3">
+                <span class = "checkmark"></span></label></div>
+                <div class="form-check form-check-inline">
+                <label class ="container">4
+                <input type="radio" name="check3">
+                <span class = "checkmark"></span></label></div>
+                <div class="form-check form-check-inline">
+                <label class ="container">5
+                <input type="radio" name="check3">
+                <span class = "checkmark"></span></label></div>
+            </td>
+        </tr>
+        <tr style="background-color: #4AB4D7;">
+            <td style="color:white;"><b>4.  Were you able to find the infromation you were looking for on our website ? </b></td>
+        </tr>
+        <tr style="background-color: #ADE7FA;">
+            <td>
+                <div class="form-check form-check-inline">
+                <label class ="container">1
+                <input type="radio" name="check4">
+                <span class = "checkmark"></span></label></div>
+                <div class="form-check form-check-inline">
+                <label class ="container">2
+                <input type="radio" name="check4">
+                <span class = "checkmark"></span></label></div>
+                <div class="form-check form-check-inline">
+                <label class ="container">3
+                <input type="radio" name="check4">
+                <span class = "checkmark"></span></label></div>
+                <div class="form-check form-check-inline">
+                <label class ="container">4
+                <input type="radio" name="check4">
+                <span class = "checkmark"></span></label></div>
+                <div class="form-check form-check-inline">
+                <label class ="container">5
+                <input type="radio" name="check4">
+                <span class = "checkmark"></span></label></div>
+            </td>
+        </tr>
+        <tr style="background-color: #4AB4D7;">
+            <td style="color:white;"><b>5.  How did this service compare to your expectations?</b> </td>
+        </tr>
+        <tr style="background-color: #ADE7FA;">
+            <td>
+                <div class="form-check form-check-inline">
+                <label class ="container">1
+                <input type="radio" name="check5">
+                <span class = "checkmark"></span></label></div>
+                <div class="form-check form-check-inline">
+                <label class ="container">2
+                <input type="radio" name="check5">
+                <span class = "checkmark"></span></label></div>
+                <div class="form-check form-check-inline">
+                <label class ="container">3
+                <input type="radio" name="check5">
+                <span class = "checkmark"></span></label></div>
+                <div class="form-check form-check-inline">
+                <label class ="container">4
+                <input type="radio" name="check5">
+                <span class = "checkmark"></span></label></div>
+                <div class="form-check form-check-inline">
+                <label class ="container">5
+                <input type="radio" name="check5">
+                <span class = "checkmark"></span></label></div>
+            </td>
+        </tr>
+        <tr style="background-color: #4AB4D7;">
+            <td style="color:white;"><b>6.  How responsive have we been to your questions or concerns about our service ? </b></td>
+        </tr>
+        <tr style="background-color: #ADE7FA;">
+            <td>
+                <div class="form-check form-check-inline">
+                <label class ="container">1
+                <input type="radio" name="check6">
+                <span class = "checkmark"></span></label></div>
+                <div class="form-check form-check-inline">
+                <label class ="container">2
+                <input type="radio" name="check6">
+                <span class = "checkmark"></span></label></div>
+                <div class="form-check form-check-inline">
+                <label class ="container">3
+                <input type="radio" name="check6">
+                <span class = "checkmark"></span></label></div>
+                <div class="form-check form-check-inline">
+                <label class ="container">4
+                <input type="radio" name="check6">
+                <span class = "checkmark"></span></label></div>
+                <div class="form-check form-check-inline">
+                <label class ="container">5
+                <input type="radio" name="check6">
+                <span class = "checkmark"></span></label></div>
+            </td>
+        </tr>
+        
+        <tr style="background-color: #4AB4D7;">
+            <td style="color:white;"><b>7.  How good was our service ?</b>  </td>
+        </tr>
+        <tr style="background-color: #ADE7FA;;">
+            <td>
+                <div class="form-check form-check-inline">
+                <label class ="container">1
+                <input type="radio" name="check7">
+                <span class = "checkmark"></span></label></div>
+                <div class="form-check form-check-inline">
+                <label class ="container">2
+                <input type="radio" name="check7">
+                <span class = "checkmark"></span></label></div>
+                <div class="form-check form-check-inline">
+                <label class ="container">3
+                <input type="radio" name="check7">
+                <span class = "checkmark"></span></label></div>
+                <div class="form-check form-check-inline">
+                <label class ="container">4
+                <input type="radio" name="check7">
+                <span class = "checkmark"></span></label></div>
+                <div class="form-check form-check-inline">
+                <label class ="container">5
+                <input type="radio" name="check7">
+                <span class = "checkmark"></span></label></div>
+            </td>
+        </tr>
+        <tr style="background-color: #4AB4D7;">
+            <td style="color:white;"><b>8.  Will you recommend our service to others ?</b> </td>
+        </tr>
+        <tr style="background-color: #ADE7FA;">
+            <td>
+                <div class="form-check form-check-inline">
+                <label class ="container">1
+                <input type="radio" name="check8">
+                <span class = "checkmark"></span></label></div>
+                <div class="form-check form-check-inline">
+                <label class ="container">2
+                <input type="radio" name="check8">
+                <span class = "checkmark"></span></label></div>
+                <div class="form-check form-check-inline">
+                <label class ="container">3
+                <input type="radio" name="check8">
+                <span class = "checkmark"></span></label></div>
+                <div class="form-check form-check-inline">
+                <label class ="container">4
+                <input type="radio" name="check8">
+                <span class = "checkmark"></span></label></div>
+                <div class="form-check form-check-inline">
+                <label class ="container">5
+                <input type="radio" name="check8">
+                <span class = "checkmark"></span></label></div>
+            </td>
+        </tr>
+    </table> 
+    <button type="submit">Submit</button>
+    </form> <br>
+
+    <a href="index.html" target="_blank">
+        <button>Profile Page</button>
+    </a> <br><br>
+
+    <audio controls autoplay>
+        <source src="music1.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio><br><br>
+
+</body>
+</html>
